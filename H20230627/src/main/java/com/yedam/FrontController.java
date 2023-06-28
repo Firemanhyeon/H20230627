@@ -11,11 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.yedam.common.Control;
+import com.yedam.member.control.CalendarForm;
 import com.yedam.member.control.ChartDataControl;
 import com.yedam.member.control.ChartFormControl;
+import com.yedam.member.control.ImageUploadControl;
 import com.yedam.member.control.LoginControl;
 import com.yedam.member.control.LoginFormControl;
+import com.yedam.member.control.MemberInfoControl;
 import com.yedam.member.control.MemberListControl;
+import com.yedam.member.control.MemberModifyControl;
 
 public class FrontController extends HttpServlet{
 	private HashMap<String, Control> menu;
@@ -29,10 +33,16 @@ public class FrontController extends HttpServlet{
 		menu.put("/memberList.do", new MemberListControl());
 		menu.put("/loginForm.do", new LoginFormControl());
 		menu.put("/login.do", new LoginControl());
+		menu.put("/memberInfo.do", new MemberInfoControl());
+		menu.put("/memberModify.do", new MemberModifyControl());
+		menu.put("/imageUpload.do", new ImageUploadControl());
+		
 		
 		//chart
 		menu.put("/chartForm.do", new ChartFormControl());
 		menu.put("/chartData.do", new ChartDataControl());
+		//캘린더
+		menu.put("/calendar.do", new CalendarForm());
 	}
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

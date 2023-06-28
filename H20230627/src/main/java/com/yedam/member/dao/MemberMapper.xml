@@ -28,9 +28,11 @@
  	</select>
  	
  	<update id="update" parameterType="member">
- 		update tbl_users
- 		set user_phone = #{userPhone} , user_addr =#{userAddr}
- 		where user_id = #{userId} 
+ 		update  tbl_users
+ 		   set  user_pw = #{userPw}, 
+ 			    user_phone = #{userPhone} , 
+ 			    user_addr =#{userAddr}
+ 		 where  user_id = #{userId} 
  	</update>
  	
  	<select id="charData" resultType="map">
@@ -40,4 +42,11 @@
 		on e.department_id = d.department_id
 		group by department_name
  	</select>
+ 	
+ 	<update id="updateImage" parameterType="member">
+	 	update  tbl_users
+	 		   set  user_img=#{userImg}
+	 		 where  user_id = #{userId} 
+ 	</update>
+ 	
 </mapper>

@@ -16,6 +16,16 @@ public interface MemberMapper {
 	public int insert(MemberVO member);
 	
 	public List<Map<String,Object>> charData();
+
+	public MemberVO select(String no);
+	
+	public int update(MemberVO member);
+	
+	public int updateImage(MemberVO member);
+
+
+
+
 	
 	
 }

@@ -2,7 +2,7 @@
  *main.js 
  */
 
- console.log("main.js");
+ /*console.log("main.js");
  
  let obj={name: "홍길동", age: 21, phone: "010-1234-5678"}
  console.log(obj.name, obj['age']);
@@ -43,4 +43,4 @@
  }
  console.log(ulTag);
  
- document.getElementById('page-content-wrapper').appendChild(ulTag);
+ document.getElementById('page-content-wrapper').appendChild(ulTag);*/
